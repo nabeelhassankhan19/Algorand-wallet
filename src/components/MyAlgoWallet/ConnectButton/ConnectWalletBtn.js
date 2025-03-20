@@ -5,16 +5,17 @@ import ConnectButton from '.';
 import { BodyText } from '../MyAlgoWallet.styles';
 const reach = loadStdlib("ALGO")
 reach.setWalletFallback(reach.walletFallback({
-    providerEnv: 'TestNet', MyAlgoConnect })); 
+    providerEnv: 'TestNet', MyAlgoConnect
+}));
 
 
-const ConnectWalletButton = ({connectWallet,accountAddress, accountBal }) => {
+const ConnectWalletButton = ({ connectWallet, accountAddress, accountBal }) => {
 
-    return(
+    return (
         <div>
-            <ConnectButton connectWallet = {connectWallet}/>
-                <BodyText>Account Address: {accountAddress} </BodyText>
-                <BodyText>Account Balance: {accountBal}</BodyText>
+            <ConnectButton connectWallet={connectWallet} />
+            <BodyText>Account Address: {accountAddress} </BodyText>
+            <BodyText>Account Balance: {accountBal}</BodyText>
         </div>
     )
 }
